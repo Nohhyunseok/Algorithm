@@ -29,7 +29,7 @@ KOI 전자에서는 건강에 좋고 맛있는 훈제오리구이 요리를 간�
 <예제 출력> 3 
 0 13
 
-<src>
+<src>1
 a, b = map(int, input().split())
 c = int(input())
 
@@ -43,3 +43,16 @@ while a > 23:
     a = a - 24
 
 print(a, b)
+
+<src>2
+a, b = map(int, input().split()) # 현재 시각 입력
+c = int(input()) # 조리할 분 입력
+
+d = a*60 + b + c # 현재 시를 분으로 변환 후 조리할 분 더함
+hour = d//60 # 60으로 나누었을 때 몫
+minute = d%60 # 60으로 나누었을 때 나머지
+
+if hour > 23:
+    hour = hour -  24 # 24시를 넘는것을 방지
+
+print(hour, minute)
